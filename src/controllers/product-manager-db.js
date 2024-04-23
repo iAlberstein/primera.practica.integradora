@@ -50,7 +50,7 @@ class ProductManager {
         try {
             const producto = await ProductModel.findById(id);
             if(!producto) {
-                console.log("Producto no encontrado, vamos a morir");
+                console.log("Producto no encontrado");
                 return null; 
             }
 
@@ -67,7 +67,7 @@ class ProductManager {
             const updateProduct =  await ProductModel.findByIdAndUpdate(id, productoActualizado);
 
             if(!updateProduct) {
-                console.log("Producto no encontrado, vamos a morir");
+                console.log("Producto no encontrado");
                 return null; 
             }
             console.log("Producto actualizado");
@@ -84,7 +84,7 @@ class ProductManager {
             const deleteProduct = await ProductModel.findByIdAndDelete(id);
 
             if(!deleteProduct) {
-                console.log("Producto no encontrado, vamos a morir");
+                console.log("Producto no encontrado");
                 console.log(id)
                 return null; 
             }

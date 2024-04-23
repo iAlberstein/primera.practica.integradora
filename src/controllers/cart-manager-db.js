@@ -40,9 +40,7 @@ class CartManager {
             }else {
                 carrito.products.push({product: productId, quantity});
             }
-
-            //Cuuando modifican tiene que marcarlo con "mar,Modified"
-            //Marcamos la propiedad "products" como modificada: 
+            
             carrito.markModified("products");
 
             await carrito.save();
