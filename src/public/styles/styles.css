@@ -113,3 +113,32 @@ form select,
 form button {
     margin-bottom: 5px;
 }
+
+.paginadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paginadores .prevnext {
+    display: flex;
+}
+
+
+.prevnext a {
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.prevnext a:hover {
+    background-color: #ddd;
+    color: #555;
+}

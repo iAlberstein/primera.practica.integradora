@@ -12,3 +12,17 @@
         </div>
     {{/each}}
 </div>
+
+<div class="paginadores">
+    <div class="prevnext">
+        {{#if hasPrevPage}}
+            <a href="?page={{prevPage}}"> Anterior </a>
+        {{/if}}
+
+        {{#if hasNextPage}}
+            <a href="?page={{nextPage}}"> Siguiente </a>
+        {{/if}}
+    </div>
+
+    <p>Página {{currentPage}} de {{totalPages}}</p>
+</div>
