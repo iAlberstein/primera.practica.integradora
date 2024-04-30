@@ -5,6 +5,9 @@ require("./database.js");
 const exphbs = require("express-handlebars");
 const socket = require("socket.io");
 
+// Importar el helper ifEqual
+const { ifEqual } = require("./helpers/handlebars-helpers.js");
+
 const productsRouter = require("./routes/products.router.js");
 const cartsRouter = require("./routes/carts.router.js");
 const viewsRouter = require("./routes/views.router.js");
@@ -16,7 +19,12 @@ app.use(express.static("./src/public"));
 
 
 //Handlebars
-app.engine("handlebars", exphbs.engine());
+app.engine("handlebars", exphbs.engine({
+    helpers: {
+        // Registrar el helper ifEqual
+        ifEqual: ifEqual
+    }
+}));
 app.set("view engine", "handlebars");
 app.set("views", "./src/views");
 

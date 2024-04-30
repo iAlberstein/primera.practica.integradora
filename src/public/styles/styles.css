@@ -142,3 +142,22 @@ form button {
     background-color: #ddd;
     color: #555;
 }
+
+.selectores {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.selectores label {
+    margin: 10px
+}
+
+.selectores input {
+    width: 80px;
+    text-align: center;
+}
+
+.selectores button {
+    margin-left: 10px
+}
